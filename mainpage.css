@@ -1,0 +1,242 @@
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./road.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background: #F4CE14;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 40px;
+    font-weight: 600;
+    color: #F5F7F8;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
+    color: #F5F7F8;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+button {
+    background-color: #495E57;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90px;
+}
+
+button a {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+#h1-head{
+    padding-left: 50px;
+    margin-top: 70px;
+}
+
+.form-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 300px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+.form-container button {
+    width: 150px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #F4CE14;
+}
+
+.main1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 50%;
+    border-color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card h2 {
+    margin: 0;
+}
+
+.card p {
+    margin: 10px 0 0;
+}
+
+
+.footer{
+    background: #222;
+}
+.box-container{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(35rem , 1fr));
+    gap: 1.5rem;
+}
+
+
+.footer .box-container .box h1{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box .text{
+    color: #eee;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.8;
+    padding-bottom: 1rem;
+}
+
+
+.footer .box-container .box .icons a{
+    display: block;
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+
+.footer .credit{
+    padding: 1rem 0;
+    text-align: center;
+    border-top: .1rem solid #808080;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #eee;
+}
+
+.navbar-brand {
+    width: 50px;
+    border-radius: 50%;
+
+}
+
+.namee{
+    display: inline-block;
+    color: white;
+    font-size: 57px;
+    margin: 20px;
+}
+
+
+/* Float four columns side by side */
+.columnn {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .roww {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .roww:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .columnn {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card1 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+
+  }
+
+#cardone{
+    margin-left: 25%;
+}
+
+.container {
+    padding: 2px 16px;
+
+}
+.columnn img{
+    width: 50px;
+}

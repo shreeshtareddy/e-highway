@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="high.css">
+    <link rel="stylesheet" href="./mainpage.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="">
+                <img class="navbar-brand" src="./Red Black Highway Logo.png" alt="" width="100%">
+                <h1 class="namee">Highway Buddy</h1>
+            </div>
+
+            <!-- <div class="logo"><a href="#">CodingNinja</a> </div> -->
+            <ul>
+                <li><a href="#">Home</a></li> 
+                <li><a href="./communityforum.html">Community Forum</a></li> 
+                <li><a href="#aboutt">About</a></li>
+                <li><a href="#con">Contact</a></li>
+                <button><a href="./login.html">Login</a></button>
+                <button><a href="./registration.html">Register</a></button>
+            </ul>
+        </div>
+    </nav>
+    <h1 id="h1-head">Hello User!!</h1>
+        <div class="form-container">        
+        <label for="from" style="padding-top: 5%;">From</label>
+        <input type="text" name="from" id="from" placeholder="Enter start location">
+        <br>
+        <label for="to" >To</label>
+        <input type="text" name="to" id="to" placeholder="Enter destination">
+        <br>
+        <button id="servicesb"  style="margin:5%">
+            <a href="#main1" >Services</a>
+        </button> 
+    </div>
+    <div class="main1" id="main1"  style="padding:10%">
+        <div class="card" style="text-align: center;">
+            <a href="./road/road.html" style="color: yellowgreen;"><h3>ROAD SERVICES</h3></a>
+            
+            <p>Ready to hit the road in style? <br> Join the click-driven road revolution!</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <a href="./medicalreal/medical.html" style="color: yellowgreen;"><h3>MEDICAL SERVICES</h3></a>
+            <p>Instant care just a click away! <br> Access emergency assistance <br> and more</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <a href="./food/foodservices.html" style="color: yellowgreen;"><h3>FOOD SERVICES</h3></a>
+            <p>Feast your way through convenience! Click to indulge in our delectable food services</p>
+        </div>
+    </div>
+    
+    
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box" style="padding-left: 5%;">
+                <h2 style="color: white;" id="aboutt"> About</h2>
+                <div class="text">
+                    <p style="font-size: medium;">Welcome to e-Highway Assistant, your seamless travel companion for highways. Locate nearby services like restaurants, washrooms, medical help, and fuel pumps effortlessly. Our real-time data and maps ensure timely assistance and peace of mind. Enjoy stress-free journeys with personalized recommendations and user-friendly interface.</p>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="box" id="con">
+                <h1>Contact info</h1>
+                <div class="icons" >
+                    <a href="#" style="font-size: medium;"><i class="fas fa-map-marker-alt"></i>Mindspace, Hyderabad, India </a>
+                    <a href="#" style="font-size: medium;"><i class="fas fa-phone-alt"></i>+91 9876543210</a>
+                    <a href="#" style="font-size: medium;"><i class="fas fa-envelope"></i>highway_buddy@gmail.com</a>
+                    <a href="#" style="font-size: medium;"><i class="fas fa-envelope"></i>Toll Free No. : 1800-333-555</a>
+                    
+
+                </div>
+                
+            </div>
+            
+
+
+        </div>
+
+        <div class="credit">2024 Highway Buddy | © all rights reserved</div>
+
+    </section>
+
+    <script type="text/javascript">
+        (function(d, m){
+            var kommunicateSettings = 
+                {"appId":"cb34e2a7568a348dc1ab9cf1df306c5a","popupWidget":true,"automaticChatOpenOnNavigation":true};
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    </script>
+</body>
+</html>

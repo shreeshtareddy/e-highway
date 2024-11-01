@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog Forum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #baadad;
+        }
+
+        #container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #262626;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #262626;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            background-color: #fafafa;
+            color: #262626;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0095f6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0057a3;
+        }
+
+        .post {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .post img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .post h2 {
+            margin-top: 0;
+            color: #262626;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .profile h3 {
+            margin: 0;
+            color: #262626;
+        }
+
+        .actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .actions button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            color: #262626;
+        }
+
+        .actions button:hover {
+            color: #0095f6;
+        }
+
+        .comment-section {
+            margin-top: 20px;
+            border-top: 1px solid #dbdbdb;
+            padding-top: 10px;
+        }
+
+        .comment {
+            margin-bottom: 10px;
+            color: #262626;
+        }
+
+        .comment-input {
+            width: calc(100% - 80px);
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+       <a href="./mainpage.html"><h1>Travel Blog Forum</h1></a> 
+        
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png" alt="Profile Picture">
+            <h3>Hi User!..</h3>
+        </div>
+
+        <!-- Post Form -->
+        <form id="postForm">
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br>
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" required></textarea><br>
+            <label for="image">Image URL:</label><br>
+            <input type="text" id="image" name="image" required><br>
+            <button type="submit">Create Post</button>
+        </form>
+
+        <!-- Post List -->
+        <div id="postList"></div>
+    </div>
+
+    <script>
+        document.getElementById('postForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var title = document.getElementById('title').value;
+            var content = document.getElementById('content').value;
+            var image = document.getElementById('image').value;
+
+            // Create post element
+            var post = document.createElement('div');
+            post.className = 'post';
+            post.innerHTML = `
+                <h2>${title}</h2>
+                <img src="${image}" alt="${title}">
+                <p>${content}</p>
+                <div class="actions">
+                    <button onclick="likePost(this)">Like</button>
+                    <button onclick="sharePost(this)">Share</button>
+                </div>
+                <div class="comment-section">
+                    <h3>Comments:</h3>
+                    <div class="comments"></div>
+                    <input type="text" class="comment-input" placeholder="Add a comment...">
+                    <button onclick="addComment(this)">Post</button>
+                </div>
+            `;
+
+            // Add post to the list
+            var postList = document.getElementById('postList');
+            postList.appendChild(post);
+
+            // Clear form fields
+            document.getElementById('title').value = '';
+            document.getElementById('content').value = '';
+            document.getElementById('image').value = '';
+        });
+
+        function likePost(button) {
+            var post = button.closest('.post');
+            var likes = post.querySelector('.likes');
+            likes.textContent = parseInt(likes.textContent) + 1;
+        }
+
+        function sharePost(button) {
+            var post = button.closest('.post');
+            alert('Post shared!');
+        }
+
+        function addComment(button) {
+            var post = button.closest('.post');
+            var commentInput = post.querySelector('.comment-input');
+            var commentText = commentInput.value.trim();
+            if (commentText !== '') {
+                var commentSection = post.querySelector('.comments');
+                var comment = document.createElement('div');
+                comment.className = 'comment';
+                comment.textContent = commentText;
+                commentSection.appendChild(comment);
+                commentInput.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
